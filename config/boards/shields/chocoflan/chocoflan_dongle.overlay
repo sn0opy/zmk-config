@@ -1,29 +1,12 @@
-#include <dt-bindings/zmk/matrix_transform.h>
+#include "chocoflan.dtsi"
 
-/ {
-    chosen {
-        zmk,kscan = &mock_kscan;
-    };
-
-    mock_kscan: mock_kscan_0 {
-        compatible = "zmk,kscan-mock";
-        columns = <0>;
-        rows = <0>;
-        events = <0>;
-    };
-};
-
-/ {
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-    };
-};
-
-/ {
-    chosen {
-        zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &physical_layout0;  // New item added
-    };
+&kscan0 {
+	col-gpios
+		= <&pro_micro 14 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 15 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 18 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 19 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 20 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 21 GPIO_ACTIVE_HIGH>
+		;
 };
