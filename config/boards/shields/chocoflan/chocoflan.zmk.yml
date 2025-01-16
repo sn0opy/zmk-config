@@ -1,0 +1,14 @@
+file_format: "1"
+id: chocoflan
+name: Chocoflan
+type: shield
+url: https://github.com/sn0opy/zmk-config/tree/main/boards/shields/chocoflan
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - chocoflan_left
+  - chocoflan_right
+  - chocoflan_dongle

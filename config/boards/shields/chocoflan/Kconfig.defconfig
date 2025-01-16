@@ -1,0 +1,32 @@
+if SHIELD_CHOCOFLAN_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "chocoflan"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_USB
+	default y
+
+endif
+
+if SHIELD_CHOCOFLAN_LEFT || SHIELD_CHOCOFLAN_RIGHT || SHIELD_CHOCOFLAN_DONGLE 
+
+config ZMK_SPLIT
+	default y
+
+config ZMK_BLE
+	default y
+	
+endif
+
+if ZMK_DISPLAY
+
+config I2C
+    default y
+
+config SSD1306
+    default y
+
+endif
