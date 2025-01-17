@@ -1,7 +1,7 @@
 config SHIELD_CHOCOFLAN_LEFT
   def_bool $(shields_list_contains,chocoflan_left)
 
-config SHIELD_CCHOCOFLAN_RIGHT
+config SHIELD_CHOCOFLAN_RIGHT
   def_bool $(shields_list_contains,chocoflan_right)
 
 config SHIELD_CHOCOFLAN_DONGLE
